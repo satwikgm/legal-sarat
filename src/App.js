@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import EnquiriesPageContainer from "./pages/enquiries-page/enquiries-page.container";
 import EnquiriesPage from "./pages/enquiries-page/enquiries-page.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import Info from './pages/info-page/info'
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser, setTypeOfUser } from "./redux/user/user.actions";
@@ -68,6 +69,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/info" component={Info}/>
           <Route
             exact
             path="/signin"

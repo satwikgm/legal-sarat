@@ -4,12 +4,13 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyDCajEP0ROQJsqWoCaFP0pzCPENR66x-vI",
-  authDomain: "sample-c8766.firebaseapp.com",
-  projectId: "sample-c8766",
-  storageBucket: "sample-c8766.appspot.com",
-  messagingSenderId: "394734800348",
-  appId: "1:394734800348:web:24ac4bfaa14666a37c5319"
+  apiKey: "AIzaSyAeWIb4g2p2e3v82ZtrdimVJIsK44swASA",
+  authDomain: "sample2-e4777.firebaseapp.com",
+  projectId: "sample2-e4777",
+  storageBucket: "sample2-e4777.appspot.com",
+  messagingSenderId: "369765474418",
+  appId: "1:369765474418:web:d908a9e380fd958ffee2eb",
+  measurementId: "G-1BBBJVNWVQ"
 };
 
 export const addCollectionAndDocuments = async (objectToAdd) => {
