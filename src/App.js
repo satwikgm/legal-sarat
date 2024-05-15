@@ -23,6 +23,8 @@ import {
   fetchEnquiriesStartAsync, //when the user logs in, it fetches the enquiries related to that user
   setEnquiriesToNull, //when the user logs out, it sets the state of the enquiries back to null to avoid data leaking
 } from "./redux/handleData/handleData.actions";
+import recordings from "./pages/recordings/recordings";
+import Quiz from "./components/Quiz/Quiz";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -70,6 +72,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/info" component={Info}/>
+          <Route exact path="/recordings" component={recordings}/>
+          <Route exact path="/games" component={Quiz}/>
           <Route
             exact
             path="/signin"

@@ -57,6 +57,7 @@ const Info = () => {
   return (
     <div>
       <h1>Types of Laws in India</h1>
+      <br /> <br />
       <ul>
         {lawsData.map((law, index) => (
           <li key={index}>

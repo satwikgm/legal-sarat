@@ -16,7 +16,11 @@ const Header = ({ currentUser }) => (
       LegalSarathi
     </Link>
 
+    <Link to="/games">Play Games</Link>
+
     <Link to="/info">Explore laws</Link>
+
+    <Link to="/recordings">Access Recordings</Link>
 
     <OptionsContainer>
       {currentUser ? ( //gives the user the option to sign out in case he/she is sign in already
