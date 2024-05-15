@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Info = () => {
   const lawsData = [
@@ -54,34 +54,34 @@ const Info = () => {
     },
   ];
 
-  // return (
-  //   <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
-  //     <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Types of Laws in India</h1>
-  //     <ul style={{ listStyleType: 'none', padding: 0 }}>
-  //       {lawsData.map((law, index) => (
-  //         <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px' }}>
-  //           <h2 style={{ color: '#007bff', marginBottom: '10px' }}>{law.title}</h2>
-  //           <p>{law.description}</p>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   </div>
-  // );
+
+  // State to store the index of the expanded law item
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  // Function to handle title click
+  const handleTitleClick = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#555', backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '20px', color: 'gold' }}>Types of Laws in India</h1>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {lawsData.map((law, index) => (
-          <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px' }}>
-            <h2 style={{ color: '#343a40', marginBottom: '10px' }}>{law.title}</h2>
-            <p>{law.description}</p>
+          <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px', opacity: expandedIndex === index ? 1 : 0.5, transition: 'opacity 0.5s ease' }}>
+            <div style={{ backgroundColor: expandedIndex === index ? '#fff' : 'transparent', boxShadow: expandedIndex === index ? '0px 2px 4px rgba(0, 0, 0, 0.1)' : 'none', padding: expandedIndex === index ? '10px' : '0', borderRadius: '4px', transition: 'background-color 0.5s ease, box-shadow 0.5s ease, padding 0.5s ease' }}>
+              <h2 style={{ color: '#343a40', marginBottom: '10px', cursor: 'pointer' }} onClick={() => handleTitleClick(index)}>{law.title}</h2>
+              {expandedIndex === index && (
+                <div style={{ backgroundColor: '#fff', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', padding: '10px', borderRadius: '4px' }}>
+                  <p>{law.description}</p>
+                </div>
+              )}
+            </div>
           </li>
         ))}
       </ul>
     </div>
   );
-
 };
 
 export default Info;

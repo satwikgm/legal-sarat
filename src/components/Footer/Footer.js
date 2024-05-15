@@ -1,41 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { List, ListItem } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "./footerStyle";
+import React from 'react';
 
-const useStyles = makeStyles(styles);
-
-export default function Footer(props) {
-  const classes = useStyles();
-  const { whiteFont } = props;
-  const footerClasses = classNames({
-    [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont,
-  });
-  const aClasses = classNames({
-    [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont,
-  });
+const Footer = () => {
   return (
-    <footer className={footerClasses}>
-      <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              
-            </ListItem>
-          </List>
-        </div>
-      </div>
+    <footer style={{ textAlign: 'center', marginTop: '20px' }}>
+      © {new Date().getFullYear()} Digital Assistant. All rights reserved.
     </footer>
   );
-}
-
-Footer.propTypes = {
-  whiteFont: PropTypes.bool,
 };
+
+export default Footer;
