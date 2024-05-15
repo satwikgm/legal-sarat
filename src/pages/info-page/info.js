@@ -54,20 +54,34 @@ const Info = () => {
     },
   ];
 
+  // return (
+  //   <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+  //     <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Types of Laws in India</h1>
+  //     <ul style={{ listStyleType: 'none', padding: 0 }}>
+  //       {lawsData.map((law, index) => (
+  //         <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px' }}>
+  //           <h2 style={{ color: '#007bff', marginBottom: '10px' }}>{law.title}</h2>
+  //           <p>{law.description}</p>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
+
   return (
-    <div>
-      <h1>Types of Laws in India</h1>
-      <br /> <br />
-      <ul>
+    <div style={{ fontFamily: 'Arial, sans-serif', color: '#555', backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: 'gold' }}>Types of Laws in India</h1>
+      <ul style={{ listStyleType: 'none', padding: 0 }}>
         {lawsData.map((law, index) => (
-          <li key={index}>
-            <h2>{law.title}</h2>
+          <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px' }}>
+            <h2 style={{ color: '#343a40', marginBottom: '10px' }}>{law.title}</h2>
             <p>{law.description}</p>
           </li>
         ))}
       </ul>
     </div>
   );
+
 };
 
 export default Info;
