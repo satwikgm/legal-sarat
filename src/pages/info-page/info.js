@@ -65,7 +65,7 @@ const Info = () => {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#555', backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: 'gold' }}>Types of Laws in India</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: 'black' }}>Types of Laws in India</h1>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {lawsData.map((law, index) => (
           <li key={index} style={{ marginBottom: '30px', borderBottom: '1px solid #ccc', paddingBottom: '20px', opacity: expandedIndex === index ? 1 : 0.5, transition: 'opacity 0.5s ease' }}>
