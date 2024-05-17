@@ -13,7 +13,7 @@ const Header = ({ currentUser }) => (
   <HeaderContainer>
     <Link to="/">
       {/* <LogoImg /> */}
-      Digital Assistant
+      DigiAssistant
     </Link>
 
     <Link to="/games">Play Games</Link>
